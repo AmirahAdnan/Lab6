@@ -1,0 +1,7 @@
+Êþº¾   ;   !ftmk/rmi/sensor/TemperatureSensor  java/lang/Object  java/rmi/Remote getTemperature ()I 
+Exceptions  java/rmi/RemoteException getTemperatureByDay (Ljava/lang/String;)I getAverageTemperature ()F 
+SourceFile TemperatureSensor.java           	     
+  
+  	     
+    	     
+      

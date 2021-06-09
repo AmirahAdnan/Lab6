@@ -1,0 +1,14 @@
+Êþº¾   ; Y  TemperatureClientRMIApp  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this LTemperatureClientRMIApp; main ([Ljava/lang/String;)V
+     java/rmi/registry/LocateRegistry   getRegistry ()Ljava/rmi/registry/Registry;  SensorJasin    java/rmi/registry/Registry   lookup %(Ljava/lang/String;)Ljava/rmi/Remote;  !ftmk/rmi/sensor/TemperatureSensor  ! " # getTemperature ()I	 % ' & java/lang/System ( ) out Ljava/io/PrintStream; + java/lang/StringBuilder -  Current temperature in Jasin is 
+ * /  0 (Ljava/lang/String;)V
+ * 2 3 4 append (I)Ljava/lang/StringBuilder; 6  Celcius
+ * 8 3 9 -(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ * ; < = toString ()Ljava/lang/String;
+ ? A @ java/io/PrintStream B 0 println
+ D F E java/lang/Exception G  printStackTrace I java/rmi/RemoteException K java/rmi/NotBoundException args [Ljava/lang/String; rmiRegistry Ljava/rmi/registry/Registry; remoteSensorJasin #Lftmk/rmi/sensor/TemperatureSensor; currentTemperature I e Ljava/lang/Exception; 
+StackMapTable 
+SourceFile TemperatureClientRMIApp.java !               /     *· ±    
+                 
+   	       Â     ;¸ L+¹  À M,¹   >² $» *Y,· .¶ 15¶ 7¶ :¶ >§ L+¶ C±    2 5 H   2 5 J  
+              2  6 ! : &    4    ; L M    . N O   " P Q    R S  6  T U  V    u D  W    X

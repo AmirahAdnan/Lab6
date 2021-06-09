@@ -1,0 +1,12 @@
+Êþº¾   ; D  TemperatureServerRMIApp  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this LTemperatureServerRMIApp; main ([Ljava/lang/String;)V  0ftmk/rmi/sensor/manager/TemperatureSensorManager
+  	
+     java/rmi/registry/LocateRegistry   getRegistry ()Ljava/rmi/registry/Registry;  SensorJasin    java/rmi/registry/Registry    rebind &(Ljava/lang/String;Ljava/rmi/Remote;)V	 " $ # java/lang/System % & out Ljava/io/PrintStream; ( 'Sensor Jasin is successfully registered
+ * , + java/io/PrintStream - . println (Ljava/lang/String;)V 0 SensorAyerKeroh 2 ,Sensor Ayer Keroh is successfully registered
+ 4 6 5 java/rmi/RemoteException 7  printStackTrace args [Ljava/lang/String; sensorJasin #Lftmk/rmi/sensor/TemperatureSensor; rmiRegistry Ljava/rmi/registry/Registry; sensorAyerKeroh e Ljava/rmi/RemoteException; 
+StackMapTable 
+SourceFile TemperatureServerRMIApp.java !               /     *· ±    
+                 
+   	       Ê     ?» Y· L¸ M,+¹  ² !'¶ )» Y· N,/-¹  ² !1¶ )§ L+¶ 3±    6 9 4  
+   * 
+           ! % $ . & 6 ) : + > 0    4    ? 8 9    . : ;   * < =  %  > ;  :  ? @  A    y 4  B    C

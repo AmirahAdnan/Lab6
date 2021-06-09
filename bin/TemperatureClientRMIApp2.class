@@ -1,0 +1,16 @@
+Êþº¾   ; |  TemperatureClientRMIApp2  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this LTemperatureClientRMIApp2; main ([Ljava/lang/String;)V
+     java/rmi/registry/LocateRegistry   getRegistry ()Ljava/rmi/registry/Registry;  SensorAyerKeroh    java/rmi/registry/Registry   lookup %(Ljava/lang/String;)Ljava/rmi/Remote;  !ftmk/rmi/sensor/TemperatureSensor  ! " # getTemperature ()I	 % ' & java/lang/System ( ) out Ljava/io/PrintStream; + java/lang/StringBuilder - %Current temperature in Ayer Keroh is 
+ * /  0 (Ljava/lang/String;)V
+ * 2 3 4 append (I)Ljava/lang/StringBuilder; 6  Celcius
+ * 8 3 9 -(Ljava/lang/String;)Ljava/lang/StringBuilder;
+ * ; < = toString ()Ljava/lang/String;
+ ? A @ java/io/PrintStream B 0 println D Sunday  F G H getTemperatureByDay (Ljava/lang/String;)I J Current temperature on  L  in Ayer Keroh is   N O P getAverageTemperature ()F R %Average temperature in Ayer Keroh is  T %.1f
+ V X W java/lang/Float Y Z valueOf (F)Ljava/lang/Float;
+ \ ^ ] java/lang/String _ ` format 9(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+ b d c java/lang/Exception e  printStackTrace g java/rmi/RemoteException i java/rmi/NotBoundException args [Ljava/lang/String; rmiRegistry Ljava/rmi/registry/Registry; remoteSensorAyerKeroh #Lftmk/rmi/sensor/TemperatureSensor; currentTemperature I day Ljava/lang/String; temperature averageTemperature F e Ljava/lang/Exception; 
+StackMapTable 
+SourceFile TemperatureClientRMIApp2.java !               /     *· ±    
+                 
+   	      ]     ¢¸ L+¹  À M,¹   >² $» *Y,· .¶ 15¶ 7¶ :¶ >C:,¹ E 6² $» *YI· .¶ 7K¶ 7¶ 15¶ 7¶ :¶ >,¹ M 8² $» *YQ· .S½ Y¸ US¸ [¶ 75¶ 7¶ :¶ >§ L+¶ a±    ™ œ f   ™ œ h  
+   2           2  6  @  f ! n " ™ &  ( ¡ -    R    ¢ j k    • l m   ‰ n o   ‚ p q  6 c r s  @ Y t q  n + u v    w x  y   	 ÷ œ b  z    {

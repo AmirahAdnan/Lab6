@@ -1,0 +1,16 @@
+Êþº¾   ; f  0ftmk/rmi/sensor/manager/TemperatureSensorManager  #java/rmi/server/UnicastRemoteObject  !ftmk/rmi/sensor/TemperatureSensor loadTemperatureData ()Ljava/util/HashMap; 	Signature <()Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>; Code 
+ java/util/HashMap
+     <init> ()V  Monday
+    java/lang/Integer   valueOf (I)Ljava/lang/Integer;
+     put 8(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;  Tuesday ! 	Wednesday # Thursday % Friday ' Saturday ) Sunday LineNumberTable LocalVariableTable this 2Lftmk/rmi/sensor/manager/TemperatureSensorManager; temperature Ljava/util/HashMap; LocalVariableTypeTable :Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Integer;>; 
+Exceptions 4 java/rmi/RemoteException
+   getTemperature ()I getTemperatureByDay (Ljava/lang/String;)I
+  ;  
+  = > ? get &(Ljava/lang/Object;)Ljava/lang/Object;
+  A B 7 intValue day Ljava/lang/String; temp I getAverageTemperature ()F
+  J K L values ()Ljava/util/Collection; N P O java/util/Collection Q R iterator ()Ljava/util/Iterator; T V U java/util/Iterator W X next ()Ljava/lang/Object; T Z [ \ hasNext ()Z
+  ^ _ 7 size totalTemperature averageTemperature F 
+StackMapTable 
+SourceFile TemperatureSensorManager.java !            	    
+    Ä     ^» Y· L+ ¸ ¶ W+¸ ¶ W+ !¸ ¶ W+"#¸ ¶ W+$$¸ ¶ W+&!¸ ¶ W+(!¸ ¶ W+°    *   & 	           ,  8  D  P  \  +       ^ , -    V . /  0      V . 1      2     3    3     *· 5±    *   
+    "  # +        , -    6 7  2     3    -     #¬    *       ( +        , -    8 9  2     3    u     *¶ :M,+¶ <À ¶ @>¬    *       .  0  2 +   *     , -      C D    E /    . F  0       E 1   G H  2     3    Ó     <*¶ :L=+¶ I¹ M :§ ¹ S À ¶ @>`=¹ Y šÿç†+¶ ]†nF%®    *       8  :  ; # = ' ; 1 @ : C +   4    < , -    7 E /   5 ` F  #  . F  :  a b  0      7 E 1  c    ÿ      T    d    e
